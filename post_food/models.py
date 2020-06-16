@@ -1,10 +1,12 @@
 from PIL import Image
+from ckeditor_uploader.fields import RichTextUploadingField
 from django.db import models
 
 # Create your models here.
 from django.urls import reverse
 from django.utils import timezone
 from django.contrib.auth.models import User
+from ckeditor.fields import RichTextField
 
 
 class Category(models.Model):
@@ -21,11 +23,13 @@ class Category(models.Model):
 class Post(models.Model):
     id_of_post=models.AutoField
     title=models.CharField(max_length=100)
-    content=models.TextField()
+    #content=models.TextField()
+    content= RichTextUploadingField()
     date_posted=models.DateTimeField(default=timezone.now())
     author=models.ForeignKey(User,on_delete=models.CASCADE)
     categories = models.ManyToManyField(Category)
-    thumbnail=models.ImageField()
+    thumbnail=models.ImageField(default='profile_icon.png')
+   # thumbnail2=models.ImageField()
     #featured=models.BooleanField()
 
     def __str__(self):

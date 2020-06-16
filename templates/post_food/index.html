@@ -34,7 +34,11 @@
         {% for object in object_list %}
         <div class="row d-flex align-items-stretch">
             {% if not forloop.first and not forloop.last %}
-            <div ><a href="{{ object.get_absolute_url }}"><img src="{{ object.thumbnail.url}}" alt="..." width="340" height="400" style="margin-left:30px; margin-right:0px"></a></div>
+            <div >
+                <a href="{{ object.get_absolute_url }}">
+                    <img src="{{ object.thumbnail.url}}" alt="..." width="340" height="400" style="margin-left:30px; margin-right:0px">
+                </a>
+              </div>
             {% endif %}
 
 
@@ -56,7 +60,7 @@
                 <footer class="post-footer d-flex align-items-center"><a href="{% url 'user-posts' object.author %}" class="author d-flex align-items-center flex-wrap">
 
 
-          {% load static %}
+                {% load static %}
                     <div class="avatar"><img src="{{ object.author.profile.profile_pic.url }}" alt="..." class="img-fluid"></div>
                     <div class="title" ><span>{{object.author}}</span></div></a>
                   <div class="date"><i class="icon-clock"></i> {{object.date_posted|timesince}} ago </div>
@@ -68,9 +72,8 @@
             </div>
           </div>
             {% if forloop.first or forloop.last %}
-                <div ><img src="{{ object.thumbnail.url }}" alt="..." style = "margin-left:20px; margin-right:0px" width="340" height="400"></div>
+                         <div ><img src="{{ object.thumbnail.url }}" alt="..." style = "margin-left:20px; margin-right:0px" width="340" height="400"></div>
             {% endif %}
-
         </div>
           <br>
        {% endfor %}
@@ -100,7 +103,11 @@
         <div class="row">
             {% for obj in latest %}
           <div class="post col-md-4">
-            <div class="post-thumbnail"><a href="{{ obj.get_absolute_url }}"><img src="{{ obj.thumbnail.url }}" alt="..."  width="100%" height="auto"></a></div>
+            <div class="post-thumbnail">
+                <a href="{{ obj.get_absolute_url }}">
+                         <img src="{{ obj.thumbnail.url }}" alt="..."  width="100%" height="auto">
+                </a>
+            </div>
             <div class="post-details">
 <!--              <div class="post-meta d-flex justify-content-between">-->
 <!--                <div class="date">{{ obj.date_posted }}</div>-->

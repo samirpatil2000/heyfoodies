@@ -48,7 +48,7 @@ class UserUpdateForm(forms.ModelForm):
 
 class ProfileUpdateForm(forms.ModelForm):
     bio=forms.CharField(max_length=200,required=True,help_text='Enter Bio \n For e.g I am interested in blog writing , or special technical blog writing .')
-    phone_number=forms.IntegerField(help_text='Enter valid phone number')
+    phone_number=forms.IntegerField(required=True,help_text='Enter valid phone number')
 
     class Meta:
         model=Profile
