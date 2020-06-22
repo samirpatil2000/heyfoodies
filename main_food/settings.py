@@ -108,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 CKEDITOR_CONFIGS = { 'default':
-                         { 'toolbar': 'Custom', 'height': 500, 'toolbar_Custom':
+                         { 'toolbar': 'Custom', 'height': 500,'width':'auto' ,'toolbar_Custom':
                              [
                                  ['Styles', 'Format', 'Bold', 'Italic', 'Underline', 'Strike', 'SpellChecker', 'Undo', 'Redo'],
                                  ['Link', 'Unlink', 'Anchor'],
@@ -169,7 +169,7 @@ EMAIL_HOST='smtp.gmail.com'
 EMAIL_PORT=587
 EMAIL_USE_TLS=True
 EMAIL_HOST_USER='samirspatil742099@gmail.com'
-EMAIL_HOST_PASSWORD='Bluesam@123'
+EMAIL_HOST_PASSWORD='Blue#143@Sam@123'
 
 
 

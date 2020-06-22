@@ -7,7 +7,7 @@
     <!-- Hero Section-->
 {% load static %}
 <section
-        style="background: url({% static '/img/nasa.jpg'%}); background-size: cover; background-position: center center"
+        style="background: url({% static '/img/paanipuri.jpg'%}); background-size: cover; background-position: center center"
         class="hero" xmlns="http://www.w3.org/1999/html">
       <div class="container">
         <div class="row">
@@ -22,8 +22,8 @@
       <div class="container">
         <div class="row">
           <div class="col-lg-8">
-            <h2 class="h3">Some great intro here</h2>
-            <p class="text-big">Place a nice <strong>introduction</strong> here <strong>to catch reader's attention</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
+            <h2 class="h3">Read Post</h2>
+            <p class="text-big"> IN this blog you can write the post  here <strong>to catch reader's attention</strong>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderi.</p>
           </div>
         </div>
       </div>
@@ -62,7 +62,7 @@
 
                 {% load static %}
                     <div class="avatar"><img src="{{ object.author.profile.profile_pic.url }}" alt="..." class="img-fluid"></div>
-                    <div class="title" ><span>{{object.author}}</span></div></a>
+                    <div class="title" ><span> {{object.author}} {{object.author.first_name}} </span></div></a>
                   <div class="date"><i class="icon-clock"></i> {{object.date_posted|timesince}} ago </div>
                     <div class="views"><i class="icon-eye"></i> {{ object.view_count}}</div>
                   <div class="comments"><i class="icon-comment"></i>#</div>
@@ -83,7 +83,7 @@
       </div>
     </section>
     <!-- Divider Section-->
-    <section style="background: url({% static '/img/divider-bg.jpg' %}); background-size: cover; background-position: center bottom" class="divider">
+    <section style="background: url({% static '/img/divider.jpg' %}); background-size: cover; background-position: center bottom" class="divider">
       <div class="container">
         <div class="row">
           <div class="col-md-7">
@@ -137,47 +137,48 @@
       </div>
     </section>
     <!-- Newsletter Section-->
-    <section class="newsletter no-padding-top">    
-      <div class="container">
-        <div class="row">
-          <div class="col-md-6">
-            <h2>Subscribe to Newsletter</h2>
-            <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          </div>
-          <div class="col-md-8">
-            <div class="form-holder">
-              <form action="." method="POST">
-                  {% csrf_token%}
-                <div class="form-group">
-                  <input type="email" name="email" id="email" placeholder="Type your email address">
-                  <button type="submit" class="submit">Subscribe</button>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+<!--    <section class="newsletter no-padding-top">    -->
+<!--      <div class="container">-->
+<!--        <div class="row">-->
+<!--          <div class="col-md-6">-->
+<!--            <h2>Subscribe to Newsletter</h2>-->
+<!--            <p class="text-big">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>-->
+<!--          </div>-->
+<!--          <div class="col-md-8">-->
+<!--            <div class="form-holder">-->
+<!--              <form action="." method="POST">-->
+<!--                  {% csrf_token%}-->
+<!--                <div class="form-group">-->
+<!--                  <input type="email" name="email" id="email" placeholder="Type your email address">-->
+<!--                  <button type="submit" class="submit">Subscribe</button>-->
+<!--                </div>-->
+<!--              </form>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </section>-->
     <!-- Gallery Section-->
     <section class="gallery no-padding">    
       <div class="row">
         <div class="mix col-lg-3 col-md-3 col-sm-6">
           {% load static %}
-          <div class="item"><a href="{% static 'img/gallery-1.jpg' %}" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-1.jpg' %}" alt="..." class="img-fluid">
+          <div class="item"><a href="{% static 'img/gallery-1.jpg' %}" data-fancybox="gallery" class="image"><img src="{% static 'img/indian-1.jpg' %}" alt="..." class="img-fluid">
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
         <div class="mix col-lg-3 col-md-3 col-sm-6">
-          <div class="item"><a href="{% static 'img/gallery-2.jpg' %}" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-2.jpg' %}" alt="..." class="img-fluid">
+          <div class="item"><a href="{% static 'img/gallery-2.jpg' %}" data-fancybox="gallery" class="image"><img src="{% static 'img/indian-2.jpg' %}" alt="..." class="img-fluid">
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
         <div class="mix col-lg-3 col-md-3 col-sm-6">
-          <div class="item"><a href="{% static 'img/gallery-3.jpg' %}" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-3.jpg' %}" alt="..." class="img-fluid">
+          <div class="item"><a href="{% static 'img/gallery-3.jpg' %}" data-fancybox="gallery" class="image"><img src="{% static 'img/indian-3.jpg' %}" alt="..." class="img-fluid">
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
         <div class="mix col-lg-3 col-md-3 col-sm-6">
-          <div class="item"><a href="{% static 'img/gallery-4.jpg' %}" data-fancybox="gallery" class="image"><img src="{% static 'img/gallery-4.jpg' %}" alt="..." class="img-fluid">
+          <div class="item"><a href="{% static 'img/gallery-4.jpg' %}" data-fancybox="gallery" class="image"><img src="{% static 'img/indian-4.jpg' %}" alt="..." class="img-fluid">
               <div class="overlay d-flex align-items-center justify-content-center"><i class="icon-search"></i></div></a></div>
         </div>
+
       </div>
     </section>
     <!-- Page Footer-->

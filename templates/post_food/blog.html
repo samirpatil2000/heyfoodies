@@ -42,7 +42,7 @@
 
                   <footer class="post-footer d-flex align-items-center"><a href="{% url 'user-posts' post.author %}" class="author d-flex align-items-center flex-wrap">
                       <div class="avatar"><img src="{{ post.author.profile.profile_pic.url}}" alt="..." class="img-fluid"></div>
-                      <div class="title"><span>{{ post.author.user }}</span></div></a>
+                      <div class="title"><span> {{ post.author.username }}</span></div></a>
                     <div class="date"><i class="icon-clock"></i>{{post.date_posted|timesince}} ago</div>
                       <div class="views"><i class="icon-eye"></i> {{ post.view_count}}</div>
                     <div class="comments meta-last"><i class="icon-comment"></i></div>
